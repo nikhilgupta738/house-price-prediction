@@ -1,54 +1,63 @@
+/* style.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-image: url('C:/Users/Nikhil/Desktop/CalifHouPricing/CaliforniaHousePricing/house.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    /* font-family: Arial, sans-serif; Define a fallback font-family */
+    /* color: #333; Set the default text color */
 }
 
+/* Container styling */
 .container {
-    width: 80%;
+    max-width: 600px;
     margin: 0 auto;
-}
-
-.pred {
-    background-color: #fff;
     padding: 20px;
+    background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-family: "lucida handwriting";
+/* Predict section styling */
+.pred {
     text-align: center;
+}
+
+.pred h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pred form {
     margin-bottom: 20px;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-input[type="text"] {
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
+.pred input[type="text"] {
+    width: calc(100% - 20px);
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
-    width: 100%;
+.pred button {
+    width: calc(100% - 20px);
     padding: 10px;
-    border: none;
-    border-radius: 5px;
     background-color: #007bff;
     color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.pred button:hover {
     background-color: #0056b3;
 }
 
-br {
-    clear: both;
+.pred .prediction-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
 }
