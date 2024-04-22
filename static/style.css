@@ -1,15 +1,11 @@
-/* style.css */
-
 body {
-    background-image: url('C:/Users/Nikhil/Desktop/CalifHouPricing/CaliforniaHousePricing/house.jpg'); /* Replace 'background-image.jpg' with the path to your image */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    /* font-family: Arial, sans-serif; Define a fallback font-family */
-    /* color: #333; Set the default text color */
+    background-image: url('CaliforniaHousePricing/house.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
-/* Container styling */
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -19,7 +15,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Predict section styling */
+
 .pred {
     text-align: center;
 }
