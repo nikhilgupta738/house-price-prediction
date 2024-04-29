@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-          "src": "vercel_app/wsgi.py",
+          "src": "CaliforniaHousePricing/index.py",
           "use": "@vercel/python",
           "config": { "maxLambdaSize": "15mb", "runtime": "python3.8" }
         }
     ],
     
-    "rewrites":[{
-        "source" : "(/.*)",
+    "routes":[{
+        "source" : "/(.*)",
         "destination" : "/"
     }]
 }
