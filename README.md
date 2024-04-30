@@ -33,3 +33,8 @@ Run the Docker container:
 ```
     docker run -p 5000:8080 my_house_price_predictor
 ```
+
+Simply run this code in terminal with correct path i.e. in CaliforniaHousePricing
+```
+    python wsgi.py
+```
