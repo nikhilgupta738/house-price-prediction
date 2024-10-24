@@ -1,59 +1,151 @@
+/* Background settings */
 body {
     background-image: url('CaliforniaHousePricing/house.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    animation: fadeInBackground 2s ease-in-out; /* Fade-in background */
 }
 
-
+/* Container for the content */
 .container {
-    max-width: 600px;
+    max-width: 900px; /* Make the container wider */
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px); /* Slight blur effect for glassmorphism */
+    text-align: center;
+    animation: fadeInContainer 1.5s ease-out; /* Add fade-in animation */
 }
 
-
+/* Prediction section styling */
 .pred {
     text-align: center;
+    padding: 20px 0;
 }
 
+/* Main title styling */
 .pred h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 32px; /* Larger font */
+    margin-bottom: 25px;
+    color: #007bff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: fadeInText 2s ease; /* Text animation */
 }
 
+/* Input form styling */
 .pred form {
     margin-bottom: 20px;
 }
 
+/* Input field styling */
 .pred input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 14px; /* Larger padding */
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 18px; /* Larger font */
+    transition: border-color 0.3s ease, transform 0.2s;
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
+/* Input field focus effect */
+.pred input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 7px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02); /* Slightly scale up on focus */
+}
+
+/* Button styling */
 .pred button {
-    width: calc(100% - 20px);
-    padding: 10px;
+    width: 100%;
+    padding: 14px; /* Larger padding */
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 20px; /* Larger font */
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+    animation: pulseEffect 3s infinite; /* Pulse animation */
 }
 
+/* Hover effect for button */
 .pred button:hover {
     background-color: #0056b3;
+    transform: scale(1.08); /* Scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Add glow effect */
 }
 
+/* Prediction text styling */
 .pred .prediction-text {
-    font-size: 18px;
+    font-size: 22px; /* Larger font */
     font-weight: bold;
     color: #007bff;
+    margin-top: 15px;
+    animation: fadeInText 1.8s ease; /* Text animation */
+}
+
+/* Additional hover effects for interactive elements */
+.pred input[type="text"]:hover, 
+.pred button:hover {
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
